@@ -1,0 +1,80 @@
+/* Main Section */
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#aboutMe {
+    max-width: 600px;
+}
+
+#aboutMe h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+#aboutMe h1 span {
+    color: var(--accent-color);
+}
+
+#aboutMe h3 {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+#hireMe, #myResume {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    margin-right: 10px;
+}
+
+#hireMe {
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
+
+#myResume {
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+#hireMe:hover, #myResume:hover {
+    transform: translateY(-5px);
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: var(--secondary-color);
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+
+#profilePicture {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--accent-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

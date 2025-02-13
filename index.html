@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="skillstyle.css"/>
+        <link rel="stylesheet" href="contactStyle.css"/>
+        <link rel="stylesheet" href="mainstyle.css"/>
+        <title>Thembinkosi Dladla - Portfolio</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <div class="logos">
+                <img src="images/Profile2.png" class="logo2" alt="Profile Picture"/>
+                <h1 class="logo">Thembinkosi Dladla</h1>
+            </div>
+            <img src="images/sleep-mode.png" class="icon" id="icon" onclick="toggleDarkMode()" alt="Dark Mode Icon"/>
+            <nav class="navbar" id="menuList">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#aboutMe">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <img src="images/darkMenu.png" id="darkMenuIcon" onclick="menuFun()" alt="Menu Icon"/>
+        </header>
+
+        <main class="info">
+            <div id="aboutMe">
+                <h1>Hi, I'm <span>Thembinkosi</span> Dladla</h1>
+                <h3>Full-Stack Developer | Building Scalable and User-Friendly Applications</h3>
+                <button id="hireMe">Hire Me</button>
+                <button type="button" id="myResume" onclick="downloadResume()">Download Resume</button>
+                <br>
+                <div class="social-icons">
+                    <a href="https://github.com/Stephan-23" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                    <a href="https://www.linkedin.com/in/thembinkosi-stephan-dladla/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://wa.me/+27606463901" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
+                    <a href="https://x.com/stephan_dladla" target="_blank"><i class="fa-brands fa-square-x-twitter"></i></a>
+                </div>
+            </div>
+            <img src="images/Profile2.png" id="profilePicture" alt="Profile Picture"/>
+        </main>
+
+        <section id="skills">
+            <h1>My Skills</h1>
+            <div class="container">
+                <div id="skillsContainer">
+                    <div class="skill-card">
+                        <h2>Front-End</h2>
+                        <ul>
+                            <li><i class="fa-brands fa-html5"></i>HTML</li>
+                            <li><i class="fa-brands fa-css3"></i>CSS</li>
+                            <li><i class="fa-brands fa-js"></i>JavaScript</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h2>Back-End</h2>
+                        <ul>
+                            <li>C#</li>
+                            <li><i class="fa-brands fa-python"></i>Python</li>
+                            <li>.NET</li>
+                            <li>MySQL</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h2>Tools</h2>
+                        <ul>
+                            <li>Git</li>
+                            <li>VS Code</li>
+                            <li>Docker</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h2>Soft Skills</h2>
+                        <ul>
+                            <li>Communication</li>
+                            <li>Teamwork</li>
+                            <li>Problem Solving</li>
+                            <li>Time Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h1>Contact Me</h1>
+            <div class="contactContainer">
+                <form id="contact-form">
+                    <input type="text" id="UserName" name="UserName" placeholder="Your Name" required/>
+                    <input type="email" id="UserEmail" name="UserEmail" placeholder="Your Email" required/>
+                    <input type="text" id="Subject" name="Subject" placeholder="Subject"/>
+                    <textarea id="msg" name="msg" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+
+        <script src="JavaScript/main.js"></script>
+    </body>
+</html>
