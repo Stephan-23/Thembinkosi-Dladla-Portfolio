@@ -106,7 +106,7 @@ header {
 }
 /*------------------------------------For-Small-Screens----------------------------------------------------*/
 @media (max-width: 700px) {
-    @media (max-width: 700px) {
+    
         .navbar {
             position: absolute;
             top: 80px;
