@@ -10,8 +10,9 @@
 /*----------------------------------------------------------------------------------------*/
 body {
     font-family: 'Poppins', sans-serif;
-    background: var(--background-gradient);
-    color: var(--secondary-color);
+    /*background: var(--background-gradient);*/
+   /* background: var(--background-gradient*/
+    background: var(--primary-color);
     transition: background 0.3s, color 0.3s;
     margin: 0;
     padding: 0;
@@ -105,7 +106,7 @@ header {
     color:#25D366 ;
 }
 /*------------------------------------For-Small-Screens----------------------------------------------------*/
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
     
         .navbar {
             position: absolute;

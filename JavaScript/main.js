@@ -29,7 +29,7 @@ function menuFun() {
 
     if (menuList.style.maxHeight === "0px" || !menuList.style.maxHeight) {
         menuList.style.maxHeight = "200px"; /* Adjust this value to fit your content */
-        menuList.style.padding = "10px"; /* Add padding when expanded */
+        menuList.style.padding = "0px"; /* Add padding when expanded */
     } else {
         menuList.style.maxHeight = "0px"; /* Collapse the navbar */
         menuList.style.padding = "0"; /* Remove padding when collapsed */
