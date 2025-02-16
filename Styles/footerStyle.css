@@ -1,0 +1,21 @@
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 15px 0; /* Smaller padding */
+    margin-top: 25px; /* Space above the footer */
+    font-size: 14px; /* Smaller text size */
+}
+
+footer .footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+  
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 0.8em; /* Smaller text size */
+}
+
