@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="contactStyle.css"/>
         <link rel="stylesheet" href="mainstyle.css"/>
         <link rel="stylesheet" href="Styles/footerStyle.css"/>
+        <link rel="stylesheet" href="Styles/chatStyle.css"/>
         <title>Thembinkosi Dladla - Portfolio</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
@@ -120,6 +121,31 @@
                 </form>
             </div>
         </section>
+       <!-----------------------------------------------Chatbot-------------------------------------->
+        <!-----------------------------------------------Chatbot-------------------------------------->
+<!-- Chatbot Button -->
+<button id="chatbot-toggle" class="chatbot-toggle">
+    <i class="fas fa-comments"></i> Chat with Me
+</button>
+
+<!-- Chatbot Container -->
+<div id="chatbot-container" class="chatbot-container">
+    <div class="chat-header">
+        <h2>Chat with Thembinkosi</h2>
+        <button id="chatbot-close" class="chatbot-close">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <div class="chat-window" id="chat-window">
+        <!-- Messages will appear here -->
+    </div>
+    <div class="chat-input">
+        <input type="text" id="message-input" placeholder="Type a message...">
+        <button id="send-button">Send</button>
+    </div>
+</div>
+        
+
         <!-----------------------------------------------Footer-------------------------------------->
         <footer>
             <div class="footer-content">
@@ -128,5 +154,6 @@
             </div>
         </footer>
         <script src="JavaScript/main.js"></script>
+        <script src="JavaScript/Chatbot.js"></script>
     </body>
 </html>
