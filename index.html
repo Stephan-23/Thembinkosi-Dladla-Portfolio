@@ -59,7 +59,38 @@
                     <br>I'm always eager to learn new technologies and take on exciting challenges.
                     Let's connect and build something amazing!
                 </p>
-                <button id="speak-btn"><i class="fas fa-volume-up"></i></button>
+
+                
+                    <!-- Education and Experience Boxes -->
+                    <div class="info-boxes">
+                        <div class="info-box">
+                            <h3>Education</h3>
+                            <p>
+                                <strong>University of KwaZulu-Natal</strong><br>
+                                Bachelor of Science in Computer Science and Information Technology<br>
+                                Graduated:  May 2024
+                            </p>
+                        </div>
+                        <div class="info-box">
+                            <h3>Experience</h3>
+                            <p>
+                                <strong>Full Stack Developer</strong><br>
+                                CAPACITI (Dec 2024 - Present)<br>
+                                <strong>Data Structures Tutor</strong><br>
+                                University of KwaZulu-Natal (Aug 2023 - Nov 2023)
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Read My Journey and speak Button -->
+                    <div class="buttons-container">
+                        <button id="speak-btn">
+                            <i class="fas fa-volume-up"></i> Speak
+                        </button>
+                        <button id="journey-button" onclick="downloadJourney()">
+                            <i class="fas fa-book"></i> Read My Journey
+                        </button>
+                    </div>
             </div>
         </section>
 
@@ -120,6 +151,37 @@
         </section>
 
 
+       <!-----------------------------------------------Chatbot-------------------------------------->
+            <!-- Chatbot Button -->
+            <button id="chatbot-toggle" class="chatbot-toggle">
+                <i class="fas fa-comments"></i> Chat with Me
+            </button>
+
+            <!-- Chatbot Container -->
+            <div id="chatbot-container" class="chatbot-container">
+                <div class="chat-header">
+                    <h2>Chat with Thembinkosi</h2>
+                    <button id="chatbot-close" class="chatbot-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="chat-window" id="chat-window">
+                    <!-- Messages will appear here -->
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="message-input" placeholder="Type a message...">
+                    <button id="send-button">Send</button>
+                </div>
+            </div>
+        
+
+        <!-----------------------------------------------Footer-------------------------------------->
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 Thembinkosi Dladla. All rights reserved.</p>
+                
+            </div>
+        </footer>
         <script src="JavaScript/main.js"></script>
     </body>
 </html>
