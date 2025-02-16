@@ -59,6 +59,34 @@ function downloadResume() {    //function to download my resume
             document.body.removeChild(link);
         });
 } 
+function sendEmail() {
+    const UserName = document.getElementById("UserName").value.trim();
+    const userEmail = document.getElementById("UserEmail").value.trim();
+    const subject = document.getElementById("Subject").value.trim();
+    const msg = document.getElementById("msg").value.trim();
+
+    // Error handling
+    if (!UserName || !userEmail|| !msg) {
+        alert("Please fill out all fields before sending the email.");
+        return;
+    }
+
+    // Validate email format
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(userEmail)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    // Construct the mailto link
+    const mailToLink = `mailto:dladlathembinkosi75@gmail.com?subject=${encodeURIComponent(subject)}&body= ${encodeURIComponent(msg)}`;
+
+    // Open the default email client
+    window.location.href = mailToLink;
+
+    // Alert the user that the email client has been opened
+    alert("Your email client has been opened. Please review and send the email.");
+}
 
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => { //smooth scrolling
@@ -103,3 +131,4 @@ function toggleSpeech() {
 
 // Attach event listener to the button
 document.getElementById("speak-btn").addEventListener("click", toggleSpeech);
+
