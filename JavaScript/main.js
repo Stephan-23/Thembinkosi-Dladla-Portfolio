@@ -69,3 +69,37 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => { //smooth scrolling
         });
     });
 });
+
+
+/************************************************************************************ */
+ // Declare variables outside the function to maintain state
+let speech = new SpeechSynthesisUtterance();
+let isSpeaking = false;
+
+function toggleSpeech() {
+    if (isSpeaking) {
+        window.speechSynthesis.cancel(); // Stop speech
+        document.getElementById("speak-btn").innerHTML = '<i class="fas fa-volume-up"></i>';
+        isSpeaking = false;
+    } else {
+        let text = document.getElementById("about-text").innerText;
+        speech.text = text;
+        speech.lang = "en-US";
+        speech.rate = 1;
+        speech.volume = 1;
+        speech.pitch = 1;
+
+        window.speechSynthesis.speak(speech);
+        document.getElementById("speak-btn").innerHTML = '<i class="fas fa-volume-mute"></i>';
+        isSpeaking = true;
+
+        // Detect when speech finishes
+        speech.onend = () => {
+            document.getElementById("speak-btn").innerHTML = '<i class="fas fa-volume-up"></i>';
+            isSpeaking = false;
+        };
+    }
+}
+
+// Attach event listener to the button
+document.getElementById("speak-btn").addEventListener("click", toggleSpeech);

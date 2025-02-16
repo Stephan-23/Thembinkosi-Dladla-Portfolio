@@ -1,12 +1,11 @@
-#About_me{
-       /* border: 5px solid var(--secondary-color);*/
-        padding: 60px 20px;
-        background: var(--background-gradient);
-        text-align: center;
-
+/* About Section */
+#About_me {
+    padding: 60px 20px;
+    background: var(--background-gradient);
+    text-align: center;
 }
 
-.AboutContainer{
+.AboutContainer {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
@@ -14,4 +13,32 @@
     backdrop-filter: blur(10px);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.AboutContainer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Speak Button */
+#speak-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#speak-btn:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+#speak-btn i {
+    margin-right: 5px;
 }
