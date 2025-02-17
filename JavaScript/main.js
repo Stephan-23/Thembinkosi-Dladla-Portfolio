@@ -15,15 +15,6 @@ function toggleDarkMode() {     //Function to change modes(dark and light mode)
     }
 }
 
-/*function menuFun() {             //Change the menu for small screen 
-    let menuList = document.getElementById("menuList"); // Get the menu list element
-
-    if (menuList.style.maxHeight === "0px" || !menuList.style.maxHeight) {
-        menuList.style.maxHeight = "700px"; // Open the menu
-    } else {
-        menuList.style.maxHeight = "0px"; // Close the menu
-    }
-}*/
 function menuFun() {
     let menuList = document.getElementById("menuList");
 
@@ -59,6 +50,31 @@ function downloadResume() {    //function to download my resume
             document.body.removeChild(link);
         });
 } 
+
+function downloadJourney() {    //function to download my journey pdf
+    const resumeFilePath = "MyResume/My Journey(Thembinkosi Dladla).pdf";
+    const link = document.createElement("a");
+    link.href = resumeFilePath;
+    link.download = "Thembinkosi_Dladla_Journey.pdf";
+    document.body.appendChild(link);
+
+    fetch(resumeFilePath)
+        .then(function (response) {
+            if (!response.ok) {
+                throw new Error("File not found");
+            }
+            link.click();
+            alert("File is downloading...");
+        })
+        .catch(function (error) {
+            alert("Error: Journey file not found. Please try again later.");
+            console.error(error);
+        })
+        .finally(function () {
+            document.body.removeChild(link);
+        });
+} 
+
 function sendEmail() {
     const UserName = document.getElementById("UserName").value.trim();
     const userEmail = document.getElementById("UserEmail").value.trim();
