@@ -53,6 +53,7 @@ function getBotResponse(userMessage) {
         contact: "Email: dladlathembinkosi75@gmail.com | GitHub: github.com/Stephan-23 | LinkedIn: linkedin.com/in/thembinkosi-stephan-dladla"
     };
 
+    if (matches(userMessage, ["hi", "hello", "hy"])) return `Hi, My name is ${botData.name}, how may I help you?.`;
     if (matches(userMessage, ["your name", "who are you"])) return `My name is ${botData.name}.`;
     if (matches(userMessage, ["your age", "how old are you"])) return `I was born on ${botData.birthdate}, so you can do the math!`;
     if (matches(userMessage, ["your education", "where did you study", "where did you go to school"])) return `I studied at ${botData.education}.`;
