@@ -2,9 +2,12 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="aboutStyle.css"/>
         <link rel="stylesheet" href="skillstyle.css"/>
         <link rel="stylesheet" href="contactStyle.css"/>
         <link rel="stylesheet" href="mainstyle.css"/>
+        <link rel="stylesheet" href="Styles/footerStyle.css"/>
+        <link rel="stylesheet" href="Styles/chatStyle.css"/>
         <title>Thembinkosi Dladla - Portfolio</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
@@ -18,20 +21,21 @@
             <img src="images/sleep-mode.png" class="icon" id="icon" onclick="toggleDarkMode()" alt="Dark Mode Icon"/>
             <nav class="navbar" id="menuList">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#aboutMe">About</a></li>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#About_me">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <img src="images/darkMenu.png" id="darkMenuIcon" onclick="menuFun()" alt="Menu Icon"/>
         </header>
+        <!-----------------------------------------------Main----------------------------------------->
 
-        <main class="info">
+        <main class="info" id="Home">
             <div id="aboutMe">
                 <h1>Hi, I'm <span>Thembinkosi</span> Dladla</h1>
                 <h3>Full-Stack Developer | Building Scalable and User-Friendly Applications</h3>
-                <button id="hireMe">Hire Me</button>
+                <a href="https://www.linkedin.com/in/thembinkosi-stephan-dladla/" target="_blank"> <button id="hireMe" >Hire Me</button></a>
                 <button type="button" id="myResume" onclick="downloadResume()">Download Resume</button>
                 <br>
                 <div class="social-icons">
@@ -43,7 +47,57 @@
             </div>
             <img src="images/Profile2.png" id="profilePicture" alt="Profile Picture"/>
         </main>
+   
 
+        <!-----------------------------------------------About---------------------------------------->
+        <section id="About_me">
+            <h1>About Me</h1>
+            <div class="AboutContainer">
+                <p id="about-text"> 
+                    Hi, I'm Thembinkosi Dladla, a passionate web developer with a strong foundation in C#, .NET, and APIs. 
+                    <br>I enjoy building scalable, user-friendly applications and writing clean, efficient code to create seamless digital experiences.
+                    <br>I specialize in HTML, CSS, JavaScript, and responsive design, ensuring that websites look and function great on any device.
+                    <br>My work often includes interactive elements, animations, and dark/light mode features to enhance user engagement.
+                    <br>Beyond coding, I love running to clear my mind and take care of my body, as well as listening to music to stay inspired.
+                    <br>I'm always eager to learn new technologies and take on exciting challenges.
+                    Let's connect and build something amazing!
+                </p>
+
+                
+                    <!-- Education and Experience Boxes -->
+                    <div class="info-boxes">
+                        <div class="info-box">
+                            <h3>Education</h3>
+                            <p>
+                                <strong>University of KwaZulu-Natal</strong><br>
+                                Bachelor of Science in Computer Science and Information Technology<br>
+                                Graduated:  May 2024
+                            </p>
+                        </div>
+                        <div class="info-box">
+                            <h3>Experience</h3>
+                            <p>
+                                <strong>Full Stack Developer</strong><br>
+                                CAPACITI (Dec 2024 - Present)<br>
+                                <strong>Data Structures Tutor</strong><br>
+                                University of KwaZulu-Natal (Aug 2023 - Nov 2023)
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Read My Journey and speak Button -->
+                    <div class="buttons-container">
+                        <button id="speak-btn">
+                            <i class="fas fa-volume-up"></i> Speak
+                        </button>
+                        <button id="journey-button" onclick="downloadJourney()">
+                            <i class="fas fa-book"></i> Read My Journey
+                        </button>
+                    </div>
+            </div>
+        </section>
+
+        <!-----------------------------------------------Skills------------------------------------->
         <section id="skills">
             <h1>My Skills</h1>
             <div class="container">
@@ -70,7 +124,7 @@
                         <ul>
                             <li>Git</li>
                             <li>VS Code</li>
-                            <li>Docker</li>
+                           
                         </ul>
                     </div>
                     <div class="skill-card">
@@ -85,7 +139,7 @@
                 </div>
             </div>
         </section>
-
+        <!-----------------------------------------------Contact-------------------------------------->
         <section id="contact">
             <h1>Contact Me</h1>
             <div class="contactContainer">
@@ -94,11 +148,42 @@
                     <input type="email" id="UserEmail" name="UserEmail" placeholder="Your Email" required/>
                     <input type="text" id="Subject" name="Subject" placeholder="Subject"/>
                     <textarea id="msg" name="msg" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send</button>
+                    <button type="submit" onclick="sendEmail()">Send</button>
                 </form>
             </div>
         </section>
+       <!-----------------------------------------------Chatbot-------------------------------------->
+<!-- Chatbot Button -->
+<button id="chatbot-toggle" class="chatbot-toggle">
+    <i class="fas fa-comments"></i> Chat with Me
+</button>
 
+<!-- Chatbot Container -->
+<div id="chatbot-container" class="chatbot-container">
+    <div class="chat-header">
+        <h2>Chat with Thembinkosi</h2>
+        <button id="chatbot-close" class="chatbot-close">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <div class="chat-window" id="chat-window">
+        <!-- Messages will appear here -->
+    </div>
+    <div class="chat-input">
+        <input type="text" id="message-input" placeholder="Type a message...">
+        <button id="send-button">Send</button>
+    </div>
+</div>
+        
+
+        <!-----------------------------------------------Footer-------------------------------------->
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 Thembinkosi Dladla. All rights reserved.</p>
+                
+            </div>
+        </footer>
         <script src="JavaScript/main.js"></script>
+        <script src="JavaScript/Chatbot.js"></script>
     </body>
 </html>

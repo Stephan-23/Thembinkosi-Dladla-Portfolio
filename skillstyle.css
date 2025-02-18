@@ -41,7 +41,7 @@
 .skill-card h2 {
     font-size: 24px;
     margin-bottom: 15px;
-    color: var(--secondary-color);
+    color: #1d2a35;
 }
 
 .skill-card ul {
@@ -53,7 +53,7 @@
 .skill-card li {
     font-size: 16px;
     margin: 10px 0;
-    color: var(--secondary-color);
+    color: #333333;
     display: flex;
     align-items: center;
     gap: 10px;
