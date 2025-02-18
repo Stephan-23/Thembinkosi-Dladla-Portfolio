@@ -19,8 +19,8 @@ function menuFun() {
     let menuList = document.getElementById("menuList");
 
     if (menuList.style.maxHeight === "0px" || !menuList.style.maxHeight) {
-        menuList.style.maxHeight = "200px"; /* Adjust this value to fit your content */
-        menuList.style.padding = "0px"; /* Add padding when expanded */
+        menuList.style.maxHeight = "200px"; 
+        menuList.style.padding = "0px"; 
     } else {
         menuList.style.maxHeight = "0px"; /* Collapse the navbar */
         menuList.style.padding = "0"; /* Remove padding when collapsed */
@@ -116,7 +116,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => { //smooth scrolling
 
 
 /************************************************************************************ */
- // Declare variables outside the function to maintain state
 let speech = new SpeechSynthesisUtterance();
 let isSpeaking = false;
 
