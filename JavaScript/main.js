@@ -146,4 +146,3 @@ function toggleSpeech() {
 
 // Attach event listener to the button
 document.getElementById("speak-btn").addEventListener("click", toggleSpeech);
-
